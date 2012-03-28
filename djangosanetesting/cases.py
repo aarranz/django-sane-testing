@@ -171,6 +171,9 @@ class HttpTestCase(DestructiveDatabaseTestCase):
         self._twill = None
         self._spynner = None
 
+    def get_live_server_url(self):
+        return get_live_server_path()
+
     def get_twill(self):
         if not self._twill:
             try:
